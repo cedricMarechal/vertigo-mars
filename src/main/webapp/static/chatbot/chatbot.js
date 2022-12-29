@@ -312,6 +312,10 @@ document.addEventListener('DOMContentLoaded', function () {
 		botIHMBaseUrl: VertigoUi.vueData.chatbotUrl + "/static/chatbot/index.html",
 		botName: "Chatbot Mars",
 		useRating: true,
-		avatarUrl: '/mars/static/chatbot/images/avatar/avatar_bar.png'
+		avatarUrl: '/static/chatbot/images/avatar/avatar_bar.png'
 	})
+
+    const welcomeTourScript = document.createElement('script')
+    welcomeTourScript.src = VertigoUi.vueData.chatbotUrl + '/api/chatbot/getWelcomeToursFile'
+    document.head.appendChild(welcomeTourScript)
 });
